@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Coins</title>
+</head>
+<body>
+    <table style="border: solid;">
+        <tr>
+            <td>
+                <h1>Crypto Exchange Rate</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="/rate" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="from">From: </label>
+                            </td>
+                            <td>
+                                <select>
+                                    <option data-th-each="key:${keyList}">
+                                        <span data-th-text=${key}></span>
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="to">To: </label>
+                            </td>
+                            <td>
+                                <select name="to" id="">
+                                    <option value="test">test</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="submit">Get Rates</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERY COIN AVAILABLE</title>
+</head>
+<body>
+    <h1>EVERY TYPE OF COIN AVAILABLE</h1>
+    <form action="/price">
+        <input type="hidden" name="coin" value="BTC">
+        <input type="hidden" name="currency" value="USD">
+        <button type="submit">Go to Price.html</button>
+    </form>
+    <table>
+        <tr data-th-each="coin:${coinList}">
+            <td data-th-text="${coin}"></td>
+        </tr>
+    </table>
+</body>
+</html>

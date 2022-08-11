@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+</head>
+<body>
+    <h1>News article</h1>
+    <div class="center" data-th-each="n:${news}" >
+        <img data-th-src="${n.imageurl}" width="50">
+        <h6>ID: <span data-th-text="${n.id}"></span></h6>
+        <h2>Title: <span data-th-text="${n.title}"></span></h2>
+        <p>Content: <span data-th-text="${n.body}"></span></p>
+        <hr class="solid">
+        
+        <!-- <table>
+            <tr>
+                <td>
+                    <img data-th-src="${n.imageurl}" width="50">
+                    <span data-th-text="${n.id}">ID: </span>
+                    
+                    <strong data-th-text="${n.title}">Title: </strong>
+                    
+                    <span data-th-text="${n.body}"></span>
+                </td>
+            </tr>
+        </table> -->
+    </div>
+</body>
+</html>
